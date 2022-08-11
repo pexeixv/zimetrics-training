@@ -37,6 +37,7 @@ body{
 
 section.container{
     display: flex;
+    overflow-y: hidden;
 }
 
 
@@ -44,6 +45,7 @@ section.container{
 
 h1{
     font-size: 4rem;
+    text-align: center;
 }
 h2{
     font-size: 2rem;
@@ -74,6 +76,34 @@ main{
     overflow-x: hidden;
 }
 
+.btn-floating{
+    color: white;
+    position: fixed;
+    background: #15847B;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    z-index: 20;
+}
+
+#scroll_up{
+    right: -40px;
+    bottom: 20px;
+}
+#scroll_up.scroll_up-visible{
+    right: 20px;
+}
+#nav_menu{
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.hide{
+    display: none;
+}
 
 
 /* Aside */
@@ -86,7 +116,8 @@ main{
     height: 100vh;
     padding: 2em;
     display: flex;
-    position: sticky;
+    position: fixed;
+    z-index: 20;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -216,9 +247,10 @@ h2.section_title::after{
 
 
 main{
-    width: 100%;
+    /* width: 100%; */
     z-index: 2;
-    flex: 1
+    /* flex: 1; */
+    padding-left: 300px;
 }
 
 section.landing{
@@ -618,22 +650,33 @@ section.projects{
 /* xl */
 @media (max-width: 1200px) {
 
+    .about_items{
+        grid-template-columns: 1fr;
+    }
+
+
     
 }
 
 
 /* lg */
 @media (max-width: 992px) { 
+    .about_image{
+        max-width: 80%;
+        margin: 0 auto;
+    }
     .fact{
         max-width: 80%;  
     }
-    .aside{
-        position: absolute;
-        top: 0;
-        left: 0;
+    #nav_menu{
+        display: grid;
     }
-.about_items{
-        grid-template-columns: 1fr;
+    .aside{
+        top: 0;
+        left: -300px;
+    }
+    .aside-shown{
+        left: 0;
     }
 
     .section_flex{
@@ -660,7 +703,10 @@ section.projects{
         grid-template-columns: 1fr 1fr;
     }
     section.section{
-        padding: 2em
+        padding: 3em 2em;
+    }
+    main{
+        padding-left: unset;
     }
 }
 
