@@ -1,0 +1,328 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+
+/* Reset */
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 150ms ease-out;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;   
+}
+body{
+    background: #000;
+    color: #fff;
+}
+
+
+/* Section specific */
+
+section{
+    width: 90%; 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3em 2em;
+}
+
+section h1, section h2, section p{
+    text-align: center;
+}
+section h1{
+    font-size: 4rem;
+}
+section h2{
+    font-size: 2.5rem;
+}
+section p{
+    color: #b2b2b2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+section main{
+    background: #353535;
+    padding: 2em;
+    margin: 2em auto;
+}
+@media screen and (max-width: 786px) {
+    section{
+        padding: 3em 1em;
+    }
+    section h1{
+        font-size: 3rem;
+    }
+    
+}
+
+
+
+/* Level 1 - Card Layout */
+
+
+#lev1 main{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+#lev1 div{
+    width: 250px;
+    aspect-ratio: 1/1;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem;
+}
+
+#lev1 div:nth-child(even){
+    background: lightgreen;
+}
+
+
+
+/* Level 2 - Nav Bar */
+
+#lev2 nav{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+#lev2 a{
+    font-size: 1.1rem;
+    color: lightblue;
+}
+@media screen and (max-width: 786px) {
+    #lev2 nav{
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* Level 3 - Side Bar */
+
+#lev3 main{
+    display: flex;
+    gap: 1em;
+}
+#lev3 aside, #lev3 div{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem;
+}
+#lev3 aside{
+    width: 30%;
+    background-color: lightblue;
+}
+#lev3 div{
+    width: 100%;
+    background: lightgreen;
+}
+
+@media screen and (max-width: 786px) {
+    #lev3 main{
+        flex-direction: column;
+    }
+    #lev3 aside{
+        width: unset;
+    }
+    #lev3 aside, #lev3 div{
+        min-height: 200px;
+    }
+}
+
+
+/* Level 4 - Card Layout 2 */
+
+#lev4 main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#lev4 div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem;
+    background: lightblue;
+    min-height: 150px;
+    outline: 5px solid black;
+}
+#lev4 div:nth-child(even){
+    background: lightgreen;
+}
+#lev4 .A{
+    width: 100%;
+}
+#lev4 .B,#lev4 .D{
+    width: 30%;
+}
+
+#lev4 .E,#lev4 .C{
+    width: 70%;
+}
+
+@media screen and (max-width: 786px) {
+    #lev4 .A{
+        width: 100%;
+    }
+    #lev4 .B,#lev4 .E{
+        width: 100%;
+    }
+    
+    #lev4 .D,#lev4 .C{
+        width: 50%;
+    }
+}
+
+
+/* Level 5 - Card Layout 2 */
+
+#lev5 main{
+    display: flex;
+    flex-wrap: wrap;
+}
+#lev5 div{
+    outline: 5px solid black;
+    width: 100%;
+    min-height: 150px;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 2rem;
+}
+#lev5 div:nth-child(even){
+    background: lightgreen;
+}
+#lev5 .B, #lev5 .D{
+    width: 20%;
+}
+#lev5 .C{
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    #lev5 .B{
+        display: none;
+    }
+    #lev5 .C, #lev5 .D{
+        width: 100%;
+    }
+    #lev5 .C{
+        min-height: 250px;
+    }    
+}
+
+
+
+/* Level 6 - Responsive Navigation Menu */
+
+#lev6 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b1b1b;
+    padding: 0.5em 1em;
+    position: relative;
+}
+#lev6 nav{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+#lev6 article{
+    padding: 3em 1em;
+    line-height: 1.6;
+    min-height: 250px;
+}
+#lev6 .hamburger{
+    cursor: pointer;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    #lev6 nav{
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: #2e2e2e;
+        height: 0;
+        overflow-y: hidden;
+        
+    }
+    #lev6 nav.show{
+        padding: 1em 2em;
+        height: unset;
+    }
+}
+@media screen and (min-width: 768px) {
+    #lev6 .hamburger{
+        display: none;
+    }
+}
+
+
+
+
+
+/* Device dialog */
+
+#device{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em 2em;
+    background: #353535;
+    text-transform: uppercase;
+    border-bottom-left-radius: 100px;
+}
+#device .mobile{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    #device .desktop{
+        display: none;
+    } #device .mobile{
+        display: inline;
+    }
+}
+
+
+
+
+
+
+
+.hidden{
+    display: none;
+}
+

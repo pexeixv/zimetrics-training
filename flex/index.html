@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master CSS Flexbox</title>
+    <link rel="shortcut icon" href="//gavn.in/fav" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div id="device">
+        <span class="mobile">Mobile</span>
+        <span class="desktop">Desktop</span>
+    </div>
+
+    <section>
+        <h1>
+            Master CSS Flexbox
+        </h1>
+    </section>
+
+    <section id="lev1">
+        <p>Level - 1</p>
+        <h2>Card Layout</h2>
+        <main>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+        </main>
+    </section>
+
+
+    <section id="lev2">
+        <p>Level - 2</p>
+        <h2>Nav Bar</h2>
+        <main>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contacts</a>
+            </nav>
+        </main>
+    </section>
+
+
+    <section id="lev3">
+        <p>Level - 3</p>
+        <h2>Side Bar</h2>
+        <main>
+            <aside>Left</aside>
+            <div>Right</div>
+        </main>
+    </section>
+
+    <section id="lev4">
+        <p>Level - 4</p>
+        <h2>Card Layout - 2</h2>
+        <main>
+            <div class="A">A</div>
+            <div class="B">B</div>
+            <div class="E">E</div>
+            <div class="C">C</div>
+            <div class="D">D</div>
+        </main>
+    </section>
+
+
+    <section id="lev5">
+        <p>Level - 5</p>
+        <h2>Holy Grail</h2>
+        <main>
+            <div class="A">A</div>
+            <div class="B">B</div>
+            <div class="C">C</div>
+            <div class="D">D</div>
+            <div class="E">E</div>
+        </main>
+    </section>
+
+    <section id="lev6">
+        <p>Level - 6</p>
+        <h2>Responsive Navigation Menu</h2>
+        <main>
+            <header>
+                <img src="//gavn.in/logo" alt="Gavin Pereira" height="50" style="filter:invert(1);">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contacts</a>
+                </nav>
+                <div class="hamburger" onclick="toggleNav()">
+                    <i class="open fas fa-bars"></i>
+                    <i class="close fas fa-xmark hidden"></i>
+                </div>
+
+            </header>
+            <article>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iure alias, mollitia cumque voluptatum,
+                totam exercitationem fuga temporibus, ipsum officia aliquam suscipit nisi autem. Quaerat eius nulla
+                temporibus exercitationem expedita culpa, adipisci rem autem ipsa odit ullam repudiandae iste suscipit
+                soluta aliquid provident earum quas eos. Dolore laudantium fugiat voluptas qui vero ex incidunt,
+                consequuntur hic eaque ea, deleniti autem dignissimos nulla odio! Totam magnam, perferendis deleniti
+                facere velit eum beatae deserunt quo veniam repellendus accusamus cumque eaque, tenetur exercitationem
+                fuga! Similique at minima cum error repellat odit. Qui atque dignissimos iure quas eveniet sequi?
+            </article>
+        </main>
+    </section>
+
+
+
+
+    <script>
+
+        const $ = (q, e = document) => e.querySelector(q)
+        const $$ = (q, e = document) => e.querySelectorAll(q)
+
+
+        const nav = $('#lev6 nav')
+        const cross = $('#lev6 .fa-xmark')
+        const bars = $('#lev6 .fa-bars')
+
+        const toggleNav = () => {
+            nav.classList.toggle('show')
+            cross.classList.toggle('hidden')
+            bars.classList.toggle('hidden')
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
