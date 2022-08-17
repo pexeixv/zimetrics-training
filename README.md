@@ -13,4 +13,4 @@
    - [zmx.gavn.in/css](https://zmx.gavn.in/css)
 
 3. Flexbox
-   -
+   - Implement flexbox layouts from [Figma file](https://www.figma.com/file/d1bG4msAzxixv9jWP8e4nA)
