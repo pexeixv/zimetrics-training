@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="//gavn.in/fav" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="//gavn.in/logo" alt="Gavin Pereira" style="filter:invert(1);height:40px;">
+                <span class="ms-2 fw-bold">Gavin Pereira</span>
+
+            </a>
+            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carousel">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cards">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sections">Sections</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" id="carousel">
+            <div class="carousel-item active">
+                <img src="https://source.unsplash.com/LPWl2pEVGKc/1080x400/" class="d-block w-100">
+                <div
+                    class="carousel-caption d-flex flex-column text-start justify-content-center h-100 align-items-start">
+                    <h1 class="fw-bolder ">Designing</h1>
+                    <p class="d-none d-lg-block">UI design is the process designers use to build interfaces in software
+                        or computerized devices,
+                        focusing on looks or style.</p> <button class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#designing">Learn more<svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/m_HRfLhgABo/1080x400/?dark,wallpaper,sea" class="d-block w-100">
+                <div
+                    class="carousel-caption d-flex flex-column text-start justify-content-center h-100 align-items-start">
+                    <h1 class="fw-bolder ">Development</h1>
+                    <p class="d-none d-lg-block">Web development refers to the building, creating, and maintaining of
+                        websites. It includes
+                        aspects such as web design, web publishing, web programming, and database management. </p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#development">Learn more<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/M5tzZtFCOfs/1080x400/" class="d-block w-100">
+                <div
+                    class="carousel-caption d-flex flex-column text-start justify-content-center h-100 align-items-start">
+                    <h1 class="fw-bolder ">Deployment</h1>
+                    <p class="d-none d-lg-block">Deploying a website means that you are deploying changes you have made
+                        to your website, typically
+                        code, from source control to an environment.</p> <button class="btn btn-primary"
+                        data-bs-toggle="modal" data-bs-target="#deployment">Learn
+                        more<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <div class="container pt-5" id="cards">
+        <div class="row py-5 g-5">
+            <div class="col-12 col-lg-3 d-flex flex-column text-center align-items-center m-auto p-3">
+                <img src="https://source.unsplash.com/LPWl2pEVGKc/150x150/" class="rounded-circle">
+                <h2 class="display-6">
+                    Designing
+                </h2>
+                <p>UI design is the process designers use to build interfaces in software or computerized devices,
+                    focusing on looks or style.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#designing">Learn more<svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg></button>
+            </div>
+            <div class="col-12 col-lg-3 d-flex flex-column text-center align-items-center m-auto p-3">
+                <img src="https://source.unsplash.com/m_HRfLhgABo/150x150/" class="rounded-circle">
+                <h2 class="display-6">
+                    Development
+                </h2>
+                <p>Web development refers to the building, creating, and maintaining of websites. It includes aspects
+                    such as web design, web publishing, web programming, and database management.
+                </p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#development">Learn more<svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg></button>
+            </div>
+            <div class="col-12 col-lg-3 d-flex flex-column text-center align-items-center m-auto p-3">
+                <img src="https://source.unsplash.com/M5tzZtFCOfs/150x150/" class="rounded-circle">
+                <h2 class="display-6">
+                    Deployment
+                </h2>
+                <p>Deploying a website means that you are deploying changes you have made to your website, typically
+                    code, from source control to an environment.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deployment">Learn more<svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg></button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container" id="sections">
+        <div class="row">
+            <hr>
+            <div class="d-flex flex-column flex-lg-row g-5 py-5">
+                <div class="px-lg-5 pb-5">
+                    <h2 class="display-5">
+                        Designing
+                    </h2>
+                    <p class="lead">
+                        UI design is the process designers use to build interfaces in software or computerized devices,
+                        focusing
+                        on looks or style.
+                    </p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#designing">Learn more<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+                <img src="https://source.unsplash.com/LPWl2pEVGKc/500x500/" class="rounded">
+            </div>
+            <hr>
+            <div class="d-flex flex-column flex-lg-row g-5 py-5">
+                <div class="px-lg-5 pb-5">
+                    <h2 class="display-5">
+                        Development
+                    </h2>
+                    <p class="lead">
+                        Web development refers to the building, creating, and maintaining of websites. It includes
+                        aspects such as web design, web publishing, web programming, and database management.
+                    </p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#development">Learn more<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+                <img src="https://source.unsplash.com/m_HRfLhgABo/500x500/" class="order-lg-first rounded">
+            </div>
+            <hr>
+            <div class="d-flex flex-column flex-lg-row g-5 py-5">
+                <div class="px-lg-5 pb-5">
+                    <h2 class="display-5">
+                        Deployment
+                    </h2>
+                    <p class="lead">
+                        Deploying a website means that you are deploying changes you have made to your website,
+                        typically code, from source control to an environment.
+                    </p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deployment">Learn more<svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></button>
+                </div>
+                <img src="https://source.unsplash.com/M5tzZtFCOfs/500x500/" class="rounded">
+            </div>
+            <hr>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="designing" aria-hidden="true" aria-labelledby="designing" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Designing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/LPWl2pEVGKc/1080x400/" class="img-fluid">
+                    <p>
+                        UI design is the process designers use to build interfaces in software or computerized devices,
+                        focusing on looks or style.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="development" aria-hidden="true" aria-labelledby="development" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Development</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/m_HRfLhgABo/1080x400/" class="img-fluid">
+                    <p>
+                        Web development refers to the building, creating, and maintaining of websites. It includes
+                        aspects such as web design, web publishing, web programming, and database management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deployment" aria-hidden=" true" aria-labelledby="deployment" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Deployment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/M5tzZtFCOfs/1080x400/" class="img-fluid">
+                    <p>
+                        Deploying a website means that you are deploying changes you have made to your website,
+                        typically code, from source control to an environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container py-5 d-flex align-items-center justify-content-between flex-column flex-lg-row gap-3">
+        <div class="d-flex align-items-center gap-3 flex-column flex-lg-row">
+            <span>&copy; gavinpereira.in </span>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+        <a href="#">Back to top</a>
+    </footer>
+
+
+
+</body>
+
+</html>
