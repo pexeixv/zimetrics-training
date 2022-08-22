@@ -1,0 +1,48 @@
+:root{
+    --background: #020B0D;
+    --text: #EAEBEC;
+    --text-muted: #CCCCCC;
+    --primary: #5CEBDF;
+    --primary-muted: #8ECEC9;
+    --subheading: #C0FFFA;
+    --grey: #B7B7B7;
+    --background-secondary: #0E1E25;
+    --form-background: #1d3038;
+    --button: #00C7B6;
+    --button-hover: #5CEBDF;
+    --button-text: #083564;
+    --scrollbar: #29404a;
+}
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 150ms ease-out;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;   
+}
+
+
+
+section{
+    min-height: 100vh;
+    background: var(--background-secondary);
+}
+
+
+
+
