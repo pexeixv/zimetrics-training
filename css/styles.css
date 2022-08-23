@@ -255,7 +255,7 @@ main{
 }
 
 section.landing{
-    background: linear-gradient(#00000070, #00000070), url("../img/cover.jpg") no-repeat fixed center center/cover;
+    background: linear-gradient(#00000070, #00000070), url("./img/cover.jpg") no-repeat fixed center center/cover;
     width: 100%;
     min-height: 100vh;
     color: white;
