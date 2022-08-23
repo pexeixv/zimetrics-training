@@ -31,3 +31,8 @@
 
    - Create Bootstrap table with listing, search and pagination.
    - [zmx.gavn.in/table](https://zmx.gavn.in/table)
+
+7. Calculator
+
+   - Create calculator app with Javascript logic.
+   - [zmx.gavn.in/calc](https://zmx.gavn.in/calc)
