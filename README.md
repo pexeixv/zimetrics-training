@@ -26,3 +26,8 @@
 
    - Clone Bootstrap carousel [template](https://getbootstrap.com/docs/5.0/examples/carousel/) with modal.
    - [zmx.gavn.in/carousel](https://zmx.gavn.in/carousel)
+
+6. Bootstrap Carousel
+
+   - Create Bootstrap table with listing, search and pagination.
+   - [zmx.gavn.in/table](https://zmx.gavn.in/table)
