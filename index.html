@@ -25,90 +25,110 @@
     </section>
 
     <section>
-        <main class="container mx-auto px-5 py-20">
-            <h2 class="text-3xl font-bold">Projects</h2>
-            <ol class="list-decimal pl-5 space-y-5 mt-8">
-                <li>
-                    <span class="font-bold text-xl ">HTML</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Created portfolio website with HTML and inline styles</li>
-                        <li><a href="./html"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/html</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl ">CSS</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Clone <a href="https://bootstrapmade.com/demo/iPortfolio/" class="underline">template</a>
-                            portfolio website using plain CSS</li>
-                        <li><a href="./css"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/css</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl ">Flexbox</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Implement flexbox layouts from <a href="https://www.figma.com/file/d1bG4msAzxixv9jWP8e4nA"
-                                class="underline">Figma file</a></li>
-                        <li><a href="./flex"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/flex</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl ">Bootstrap Blog</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Clone Bootstrap blog <a href="https://startbootstrap.com/previews/blog-post"
-                                class="underline">template</a></li>
-                        <li><a href="./blog"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/blog</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl ">Bootstrap Carousel</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Clone Bootstrap carousel <a href="https://getbootstrap.com/docs/5.0/examples/carousel/"
-                                class="underline">template</a> with modal.</li>
-                        <li><a href="./carousel"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/carousel</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl">Bootstrap Tables</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Create Bootstrap table with listing, search and pagination.</li>
-                        <li><a href="./table"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/table</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="font-bold text-xl">Calculator</span>
-                    <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
-                        <li>Create calculator app with Javascript logic.</li>
-                        <li><a href="./calc/"
-                                class="underline decoration-transparent hover:decoration-black duration-300 transition-colors"
-                                target="_blank">zmx.gavn.in/calc</a>
-                        </li>
-                    </ul>
-                </li>
+        <main class="container mx-auto px-5 lg:px-20 py-20 flex gap-10">
+            <div class="lg:w-5/12">
+                <h2 class="text-3xl font-bold">Projects</h2>
+                <ol class="list-decimal pl-5 space-y-5 mt-8" id="items">
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl ">HTML</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Created portfolio website with HTML and inline styles</li>
+                            <li><a href="./html"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/html</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl ">CSS</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Clone <a href="https://bootstrapmade.com/demo/iPortfolio/"
+                                    class="underline">template</a>
+                                portfolio website using plain CSS</li>
+                            <li><a href="./css"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/css</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl ">Flexbox</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Implement flexbox layouts from <a
+                                    href="https://www.figma.com/file/d1bG4msAzxixv9jWP8e4nA" class="underline">Figma
+                                    file</a></li>
+                            <li><a href="./flex"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/flex</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl ">Bootstrap Blog</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Clone Bootstrap blog <a href="https://startbootstrap.com/previews/blog-post"
+                                    class="underline">template</a></li>
+                            <li><a href="./blog"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/blog</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl ">Bootstrap Carousel</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Clone Bootstrap carousel <a href="https://getbootstrap.com/docs/5.0/examples/carousel/"
+                                    class="underline">template</a> with modal.</li>
+                            <li><a href="./carousel"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/carousel</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl">Bootstrap Tables</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Create Bootstrap table with listing, search and pagination.</li>
+                            <li><a href="./table"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/table</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-orange-100 rounded p-2">
+                        <span class="font-bold text-xl">Calculator</span>
+                        <ul class="list-[disc] pl-5 marker:text-neutral-400 mt-2">
+                            <li>Create calculator app with Javascript logic.</li>
+                            <li><a href="./calc/"
+                                    class="underline decoration-transparent hover:decoration-blue-600 duration-300 transition-colors text-blue-600"
+                                    target="_blank" data-link>zmx.gavn.in/calc</a>
+                            </li>
+                        </ul>
+                    </li>
 
-            </ol>
+
+                </ol>
+            </div>
+            <div class="lg:w-7/12">
+                <img src="" id="image" class="hidden lg:flex sticky top-5 w-full rounded-lg shadow-xl">
+            </div>
         </main>
     </section>
 
 
+    <script>
+        const $ = (q, e = document) => e.querySelector(q);
+        const $$ = (q, e = document) => e.querySelectorAll(q);
 
+        const image = $('#image')
+        const items = $$('ol#items > li')
+
+        items.forEach(item => item.addEventListener('mouseenter', e => {
+            const link = $('[data-link]', e.target).innerText
+            const slug = link.split('/')[1]
+            image.src = `./img/${slug}.png`
+        }))
+    </script>
 
 
 
