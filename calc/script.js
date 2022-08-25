@@ -5,7 +5,6 @@ const display = $(".display");
 
 const appendToDisplay = (buttonText) => {
   const displayText = display.innerText;
-
   if (
     "/*-+".includes(buttonText.trim()) &&
     "/*-+".includes(displayText[displayText.length - 1])
