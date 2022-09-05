@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone &bull; Paper &bull; Scissors</title>
+    <link rel="shortcut icon" href="//gavn.in/fav" type="image/x-icon">
+    <script src="//cdn.tailwindcss.com"></script>
+    <script src="./js/main.js" defer></script>
+</head>
+
+<style type="text/tailwindcss">
+    @layer base{*{@apply transition-all duration-200 delay-[0]}}
+  </style>
+
+<body class="bg-black text-white">
+
+
+    <main class="h-screen bg-[url('./img/bg-mobile.svg')] lg:bg-[url('./img/bg-desktop.svg')] bg-cover 
+        bg-no-repeat bg-center flex flex-col lg:flex-row items-center justify-between gap-5 overflow-hidden">
+
+
+        <span
+            class="texts absolute top-1/2 left-1/2 text-5xl lg:text-7xl -translate-x-1/2 -translate-y-1/2 text-green-300 font-black drop-shadow-lg text-center  pointer-events-none scale-0 transition-all "
+            id="winText">
+            You win!
+        </span>
+        <span
+            class="texts absolute top-1/2 left-1/2 text-5xl lg:text-7xl -translate-x-1/2 -translate-y-1/2 text-red-300 font-black drop-shadow-lg   text-center pointer-events-none scale-0 transition-all"
+            id="loseText">
+            You lose!
+        </span>
+        <span
+            class="texts absolute top-1/2 left-1/2 text-5xl lg:text-7xl -translate-x-1/2 -translate-y-1/2 text-yellow-300 font-black drop-shadow-lg   text-center pointer-events-none scale-0 transition-all"
+            id="tieText">
+            Tie!
+        </span>
+
+
+
+
+
+
+
+
+        <section id="loser"
+            class=" bg-red-500 text-white h-screen w-screen absolute top-0 bottom-0 z-20 flex items-center text-center  flex-col justify-center gap-8 scale-0 duration-500">
+            <h2 class="text-7xl font-black">You lose!</h2>
+            <button class="bg-white text-black py-2 px-6 rounded shadow-lg" onclick="reset()">Play again 🔄</button>
+        </section>
+        <section id="winner"
+            class=" bg-green-500 text-black h-screen w-screen absolute top-0 bottom-0 z-20 flex items-center text-center  flex-col justify-center gap-8 scale-0 duration-500">
+            <h2 class="text-7xl font-black">You win!</h2>
+            <button class="bg-white text-black py-2 px-6 rounded shadow-lg" onclick="reset()">Play again 🔄</button>
+        </section>
+
+
+
+
+
+        <section id="cpu" class=" min-h-[50vh] w-[100vw] lg:min-h-screen lg:w-1/2  relative">
+            <span class="absolute left-0 bottom-5 lg:top-0 lg:right-16 p-4 text-6xl font-black text-right"
+                id="cpuScore">0</span>
+            <div id="screen" class=" h-[60vh] w-full flex justify-start">
+                <img id="cpuHand" src="" class="h-2/3 lg:h-full rotate-90 -translate-x-[150%] pointer-events-none">
+            </div>
+            <div class="absolute hidden lg:flex bottom-2 left-2 gap-5 items-center">
+                <button class="text-3xl outline-none focus:ring-4 rounded aspect-square" onclick="reset()">🔄</button>
+                <div class="flex text-sm flex-col ">
+                    <span>1: Stone</span>
+                    <span>2: Paper</span>
+                    <span>3: Scissor</span>
+                </div>
+                <h4 class="font-bold text-2xl ">
+                    First to reach 3 points wins.
+                </h4>
+            </div>
+        </section>
+
+
+        <section id="user"
+            class=" min-h-[50vh] w-[100vw] lg:min-h-screen lg:w-1/2 flex lg:flex-col items-center relative justify-end">
+
+
+            <span class="absolute left-0 top-5 lg:top-0 lg:-left-8 p-4 text-6xl font-black" id="userScore">0</span>
+
+            <div id="screen" class=" h-[60vh] lg:w-full flex justify-end">
+                <img id="userHand" src="" class="h-2/3 lg:h-full -rotate-90 translate-x-[150%] pointer-events-none">
+            </div>
+
+            <div id="options"
+                class="flex items-end flex-1 lg:w-full justify-center px-4 gap-6 lg:gap-12 order-first lg:order-last z-10 absolute lg:relative bottom-0 left-0">
+                <img onclick="optionSelected(this)" src="./img/stone.svg"
+                    class="h-32 lg:h-44 cursor-pointer hover:scale-105">
+                <img onclick="optionSelected(this)" src="./img/paper.svg"
+                    class="h-32 lg:h-44 cursor-pointer hover:scale-105">
+                <img onclick="optionSelected(this)" src="./img/scissor.svg"
+                    class="h-32 lg:h-44 cursor-pointer hover:scale-105">
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
