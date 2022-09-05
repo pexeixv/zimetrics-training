@@ -22,7 +22,8 @@ const random = (list) => {
 };
 
 const optionSelected = (that) => {
-  const userChoice: string = that.src.split("/")[4].replace(".svg", "");
+  const srcArray = that.src.split("/");
+  const userChoice: string = srcArray[srcArray.length - 1].replace(".svg", "");
 
   userHand.classList.add("translate-x-[150%]");
   setTimeout(() => userHand.classList.remove("translate-x-[150%]"), 500);

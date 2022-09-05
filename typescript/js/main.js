@@ -21,7 +21,8 @@ var random = function (list) {
     return list[Math.floor(Math.random() * list.length)];
 };
 var optionSelected = function (that) {
-    var userChoice = that.src.split("/")[4].replace(".svg", "");
+    var srcArray = that.src.split("/");
+    var userChoice = srcArray[srcArray.length - 1].replace(".svg", "");
     userHand.classList.add("translate-x-[150%]");
     setTimeout(function () { return userHand.classList.remove("translate-x-[150%]"); }, 500);
     setTimeout(function () { return (userHand.src = "./img/".concat(userChoice, ".svg")); }, 500);
