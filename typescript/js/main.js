@@ -20,9 +20,7 @@ var youWin = $("#winner");
 var random = function (list) {
     return list[Math.floor(Math.random() * list.length)];
 };
-var optionSelected = function (that) {
-    var srcArray = that.src.split("/");
-    var userChoice = srcArray[srcArray.length - 1].replace(".svg", "");
+var optionSelected = function (userChoice) {
     userHand.classList.add("translate-x-[150%]");
     setTimeout(function () { return userHand.classList.remove("translate-x-[150%]"); }, 500);
     setTimeout(function () { return (userHand.src = "./img/".concat(userChoice, ".svg")); }, 500);
@@ -54,7 +52,6 @@ var optionSelected = function (that) {
     else {
         setTimeout(function () { return winText.classList.remove("scale-0"); }, 500);
         setTimeout(function () {
-            console.log(userScore.innerText);
             userScore.innerText = String(+userScore.innerText + 1);
             if (userScore.innerText === "3") {
                 youWin.classList.remove("scale-0");
@@ -62,14 +59,7 @@ var optionSelected = function (that) {
         }, 700);
     }
 };
-var options = $$("#options img");
-window.addEventListener("keydown", function (e) {
-    if ("123".includes(e.key)) {
-        options[+e.key - 1].click();
-    }
-    if ("r".includes(e.key))
-        reset();
-});
+var options = $$("#options > button");
 var reset = function () {
     userScore.innerText = "0";
     cpuScore.innerText = "0";
@@ -79,3 +69,16 @@ var reset = function () {
     youWin.classList.add("scale-0");
     texts.forEach(function (text) { return text.classList.add("scale-0"); });
 };
+window.addEventListener("keydown", function (e) {
+    var key = e.key;
+    switch (key) {
+        case "1":
+        case "2":
+        case "3":
+            options[+key - 1].click();
+            break;
+        case "r":
+            reset();
+            break;
+    }
+});

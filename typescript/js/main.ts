@@ -4,27 +4,23 @@ const $$ = (q: string, e = document) => e.querySelectorAll(q);
 const userHand = $("#userHand")! as HTMLImageElement;
 const cpuHand = $("#cpuHand")! as HTMLImageElement;
 
-const userScore = $("#userScore")! as HTMLElement;
-const cpuScore = $("#cpuScore")! as HTMLElement;
+const userScore = $("#userScore")! as HTMLSpanElement;
+const cpuScore = $("#cpuScore")! as HTMLSpanElement;
 
 const hands = ["stone", "paper", "scissor"];
 
 const texts = $$(".texts");
-const winText = $("#winText")! as HTMLElement;
-const loseText = $("#loseText")! as HTMLElement;
-const tieText = $("#tieText")! as HTMLElement;
+const winText = $("#winText")! as HTMLSpanElement;
+const loseText = $("#loseText")! as HTMLSpanElement;
+const tieText = $("#tieText")! as HTMLSpanElement;
 
-const youLose = $("#loser")! as HTMLElement;
-const youWin = $("#winner") as HTMLElement;
+const youLose = $("#loser")! as HTMLDivElement;
+const youWin = $("#winner") as HTMLDivElement;
 
-const random = (list) => {
-  return list[Math.floor(Math.random() * list.length)];
-};
+const random = (list: string[]) =>
+  list[Math.floor(Math.random() * list.length)];
 
-const optionSelected = (that) => {
-  const srcArray = that.src.split("/");
-  const userChoice: string = srcArray[srcArray.length - 1].replace(".svg", "");
-
+const optionSelected = (userChoice: string) => {
   userHand.classList.add("translate-x-[150%]");
   setTimeout(() => userHand.classList.remove("translate-x-[150%]"), 500);
   setTimeout(() => (userHand.src = `./img/${userChoice}.svg`), 500);
@@ -58,7 +54,6 @@ const optionSelected = (that) => {
   } else {
     setTimeout(() => winText.classList.remove("scale-0"), 500);
     setTimeout(() => {
-      console.log(userScore.innerText);
       userScore.innerText = String(+userScore.innerText + 1);
       if (userScore.innerText === "3") {
         youWin.classList.remove("scale-0");
@@ -67,14 +62,7 @@ const optionSelected = (that) => {
   }
 };
 
-const options = $$("#options img");
-
-window.addEventListener("keydown", (e) => {
-  if ("123".includes(e.key)) {
-    options[+e.key - 1].click();
-  }
-  if ("r".includes(e.key)) reset();
-});
+const options = $$("#options > button") as NodeListOf<HTMLButtonElement>;
 
 const reset = () => {
   userScore.innerText = "0";
@@ -85,3 +73,18 @@ const reset = () => {
   youWin.classList.add("scale-0");
   texts.forEach((text) => text.classList.add("scale-0"));
 };
+
+window.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  switch (key) {
+    case "1":
+    case "2":
+    case "3":
+      options[+key - 1].click();
+      break;
+    case "r":
+      reset();
+      break;
+  }
+});
